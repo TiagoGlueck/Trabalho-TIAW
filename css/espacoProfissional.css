@@ -1,0 +1,198 @@
+
+:root {
+    --cor-primaria: #E74C3C; 
+    --cor-secundaria: #FFFFFF; 
+    --cor-fundo: #f0f2f5; 
+    --cor-texto: #333333; 
+    --cor-texto-claro: #FFFFFF;
+    --cor-borda: #d9d9d9;
+    --cor-azul-info: #3498DB; 
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .cabecalho-profissional {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px var(--cor-sombra);
+  }
+  
+  .cabecalho-profissional .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container-campanhas {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 20px;
+}
+
+.container-campanhas .barra-pesquisa {
+    background-color: #7c0a02;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.container-campanhas .barra-pesquisa input {
+    width: 60%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.container-campanhas .principal {
+    display: flex;
+    padding: 30px 0;
+    gap: 30px;
+}
+
+.container-campanhas .filtros {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.container-campanhas .filtros h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #7c0a02;
+}
+
+.container-campanhas .filtros label {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.container-campanhas .filtros select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 0.95rem;
+}
+
+.container-campanhas .campanhas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    flex: 1;
+}
+
+.container-campanhas .campanha {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.container-campanhas .campanha:hover {
+    transform: translateY(-5px);
+}
+
+.container-campanhas .campanha h3 {
+    color: #7c0a02;
+    margin-bottom: 10px;
+}
+
+.container-campanhas .campanha p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.container-campanhas .campanha span {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+  
+  .cabecalho-profissional h1 a {
+      color: var(--cor-texto-claro);
+      text-decoration: none;
+      font-size: 1.8rem;
+      font-weight: bold;
+  }
+  
+  .cabecalho-profissional .titulo-area {
+      font-size: 1.2rem;
+      font-weight: normal;
+  }
+  
+
+  
+  .rodape-profissional {
+    background-color: #e9ecef;
+    color: #555;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; 
+    border-top: 1px solid var(--cor-borda);
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+      .cabecalho-profissional .container {
+          flex-direction: column;
+          text-align: center;
+      }
+      .cabecalho-profissional .titulo-area {
+          margin-top: 0.5rem;
+      }
+      .dashboard-modulos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .dashboard-modulos {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+      }
+       .conteudo-principal h2 {
+          font-size: 1.5rem;
+      }
+      .introducao {
+          font-size: 1rem;
+      }
+      .modulo h3 {
+          font-size: 1.2rem;
+      }
+  }
+  
